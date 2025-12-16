@@ -235,10 +235,7 @@ def main():
 
     # Confirm before processing
     print("\n" + "-" * 70)
-    user_input = input("Start preprocessing? This may take 30-60 minutes. [y/N]: ")
-    if user_input.lower() not in ['y', 'yes']:
-        print("Preprocessing cancelled.")
-        return
+    print("Starting preprocessing (this may take 30-60 minutes)...")
 
     # Start preprocessing
     start_time = time.time()

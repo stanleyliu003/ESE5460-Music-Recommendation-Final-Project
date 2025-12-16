@@ -11,8 +11,15 @@ __pycache__/
 .Python
 
 # Datasets (downloaded via kagglehub)
-/data/
-datasets/
+# Exclude raw data, but keep processed .npy files (tracked by Git LFS)
+/data/raw/
+
+# Keep metadata files (small, useful for reproducibility)
+!/data/metadata.csv
+!/data/splits/
+!/data/processed/
+
+# Audio file formats
 *.wav
 *.mp3
 *.flac
