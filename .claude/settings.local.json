@@ -6,7 +6,10 @@
       "Bash(source .venv/bin/activate)",
       "Bash(pip install:*)",
       "Bash(python download_dataset.py:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(find:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git add:*)"
     ]
   }
 }

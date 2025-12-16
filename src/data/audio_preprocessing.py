@@ -3,11 +3,14 @@ Audio Preprocessing Module
 
 Handles:
 1. Loading audio files (.mp3 and .wav)
-2. Resampling to target sample rate (22,050 Hz)
+2. Resampling to target sample rate (16,000 Hz - downsampling, no upsampling)
 3. Trimming/padding to exact duration (30 seconds)
 4. Converting to mel spectrogram
 5. Normalization
 6. Saving as .npy files
+
+Note: SONICS is 16,000 Hz, GTZAN is 22,050 Hz.
+We downsample to 16,000 Hz to avoid upsampling artifacts.
 """
 
 import numpy as np
@@ -18,7 +21,7 @@ from typing import Tuple, Optional
 
 
 # Preprocessing configuration
-TARGET_SR = 22050  # Target sample rate (Hz)
+TARGET_SR = 16000  # Target sample rate (Hz) - use SONICS rate, downsample GTZAN
 DURATION = 30.0    # Duration in seconds
 N_MELS = 128       # Number of mel bands
 N_FFT = 2048       # FFT window size
@@ -163,15 +166,16 @@ def get_spectrogram_shape() -> Tuple[int, int]:
     """
     Calculate expected mel spectrogram shape.
 
-    Note: The actual shape from librosa is (128, 1292) for our configuration.
+    Note: The actual shape from librosa is (128, 938) for our configuration.
 
     Returns:
         Tuple of (n_mels, n_frames)
     """
     # Empirically determined from librosa
-    # With SR=22050, duration=30s, n_fft=2048, hop=512
-    # librosa produces exactly 1292 frames
-    return (N_MELS, 1292)
+    # With SR=16000, duration=30s, n_fft=2048, hop=512
+    # 30s * 16000 Hz = 480,000 samples
+    # frames = ceil(samples / hop_length) = ceil(480000 / 512) = 938
+    return (N_MELS, 938)
 
 
 def verify_preprocessing(npy_path: str) -> None:

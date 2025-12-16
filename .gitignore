@@ -11,7 +11,7 @@ __pycache__/
 .Python
 
 # Datasets (downloaded via kagglehub)
-data/
+/data/
 datasets/
 *.wav
 *.mp3
@@ -44,3 +44,8 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Project documentation (internal use, not for GitHub)
+IMPLEMENTATION_PLAN.md
+PHASE*_SUMMARY.md
+QUICKSTART.md
