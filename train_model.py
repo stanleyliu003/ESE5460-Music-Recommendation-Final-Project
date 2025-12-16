@@ -20,14 +20,14 @@ def main():
     """Main training function"""
 
     print("=" * 70)
-    print("AUDIO CLASSIFIER TRAINING - 100 EPOCHS")
+    print("AUDIO CLASSIFIER TRAINING - 20 EPOCHS")
     print("=" * 70)
 
     # Configuration
     BATCH_SIZE = 32
     LEARNING_RATE = 0.001
-    NUM_EPOCHS = 100
-    EARLY_STOPPING_PATIENCE = 15
+    NUM_EPOCHS = 20
+    EARLY_STOPPING_PATIENCE = None  # No early stopping
     NUM_WORKERS = 4
 
     # Paths
@@ -81,7 +81,7 @@ def main():
         optimizer=optimizer,
         device=device,
         checkpoint_dir=checkpoint_dir,
-        model_name="audio_cnn_100epochs"
+        model_name="audio_cnn_20epochs"
     )
 
     # Train
@@ -89,12 +89,12 @@ def main():
     print()
     history = trainer.train(
         num_epochs=NUM_EPOCHS,
-        early_stopping_patience=EARLY_STOPPING_PATIENCE
+        early_stopping_patience=EARLY_STOPPING_PATIENCE if EARLY_STOPPING_PATIENCE else 999
     )
 
     print("\n✅ Training complete!")
     print(f"📊 Results saved to: {checkpoint_dir}")
-    print(f"📈 To visualize: python src/utils/visualization.py {checkpoint_dir}/audio_cnn_100epochs_history.json")
+    print(f"📈 To visualize: python src/utils/visualization.py {checkpoint_dir}/audio_cnn_20epochs_history.json")
 
 
 if __name__ == "__main__":
