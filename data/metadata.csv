@@ -441,7 +441,6 @@ file_path,label,source,filename,split,npy_path
 /Users/stanleycliu/.cache/kagglehub/datasets/awsaf49/sonics-dataset/versions/2/fake_songs/fake_19439_suno_1.mp3,1,SONICS,fake_19439_suno_1.mp3,train,data/processed/ai_songs/fake_19439_suno_1.npy
 /Users/stanleycliu/.cache/kagglehub/datasets/awsaf49/sonics-dataset/versions/2/fake_songs/fake_00958_udio_1.mp3,1,SONICS,fake_00958_udio_1.mp3,train,data/processed/ai_songs/fake_00958_udio_1.npy
 /Users/stanleycliu/.cache/kagglehub/datasets/awsaf49/sonics-dataset/versions/2/fake_songs/fake_08389_suno_1.mp3,1,SONICS,fake_08389_suno_1.mp3,train,data/processed/ai_songs/fake_08389_suno_1.npy
-/Users/stanleycliu/.cache/kagglehub/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/versions/1/Data/genres_original/jazz/jazz.00054.wav,0,GTZAN,jazz.00054.wav,train,data/processed/real_songs/jazz.00054.npy
 /Users/stanleycliu/.cache/kagglehub/datasets/awsaf49/sonics-dataset/versions/2/fake_songs/fake_12481_suno_1.mp3,1,SONICS,fake_12481_suno_1.mp3,train,data/processed/ai_songs/fake_12481_suno_1.npy
 /Users/stanleycliu/.cache/kagglehub/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/versions/1/Data/genres_original/country/country.00061.wav,0,GTZAN,country.00061.wav,train,data/processed/real_songs/country.00061.npy
 /Users/stanleycliu/.cache/kagglehub/datasets/awsaf49/sonics-dataset/versions/2/fake_songs/fake_10574_udio_0.mp3,1,SONICS,fake_10574_udio_0.mp3,train,data/processed/ai_songs/fake_10574_udio_0.npy
