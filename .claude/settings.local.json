@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 1 python:*)",
+      "Bash(timeout 1 python3:*)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(pip install:*)",
+      "Bash(python download_dataset.py:*)",
+      "Bash(python:*)"
+    ]
+  }
+}

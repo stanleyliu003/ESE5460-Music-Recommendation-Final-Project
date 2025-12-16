@@ -43,15 +43,34 @@ This project addresses both problems:
 
 ## Dataset
 
-We use the **SONICS dataset**:
+We use two primary datasets:
 
-- ~49,000+ AI-generated songs  
-- ~48,000+ human-generated songs  
-
-The dataset is available from:
-
-- Kaggle: `https://www.kaggle.com/datasets/awsaf49/sonics-dataset`  
+### 1. SONICS Dataset
+- ~49,000+ AI-generated songs
+- ~48,000+ human-generated songs
+- Kaggle: `https://www.kaggle.com/datasets/awsaf49/sonics-dataset`
 - Hugging Face: `https://huggingface.co/datasets/awsaf49/sonics`
+
+### 2. GTZAN Dataset
+- Music genre classification dataset
+- 10 genres, 100 tracks each (1000 total)
+- Kaggle: `https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification`
+
+### Setup Instructions
+
+**Important**: The datasets are NOT included in this repository due to their large size. Follow these steps to download them:
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Download datasets:
+   ```bash
+   python download_dataset.py
+   ```
+
+This script will download both required datasets to your local machine via `kagglehub`. The datasets are cached locally and don't need to be re-downloaded.
 
 ## High-Level Approach
 
