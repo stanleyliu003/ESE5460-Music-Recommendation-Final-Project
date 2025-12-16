@@ -257,13 +257,9 @@ def main():
     # Verify random samples
     verify_random_samples(metadata_df, num_samples=5)
 
-    print("\n" + "=" * 70)
-    print("✅ BATCH PREPROCESSING COMPLETE!")
-    print("=" * 70)
     print(f"\nPreprocessed spectrograms saved to:")
     print(f"  - {OUTPUT_DIR_AI}")
     print(f"  - {OUTPUT_DIR_REAL}")
-    print(f"\nNext step: Train the CNN classifier!")
 
 
 if __name__ == "__main__":

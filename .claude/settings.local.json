@@ -9,7 +9,15 @@
       "Bash(python:*)",
       "Bash(find:*)",
       "Bash(git check-ignore:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git restore:*)",
+      "Bash(git lfs version:*)",
+      "Bash(brew install:*)",
+      "Bash(git lfs install:*)",
+      "Bash(git lfs track:*)",
+      "Bash(cat:*)",
+      "Bash(git lfs:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd processed mel spectrograms and metadata using Git LFS\n\n- Set up Git LFS to track .npy files\n- Add 1,999 processed mel spectrograms (128x938) to data/processed/\n  - 1,000 AI-generated songs (Suno/Udio)\n  - 999 real songs (GTZAN dataset)\n- Add metadata.csv with full dataset info\n- Add train/val/test split files (70/15/15)\n- Update batch_preprocess.py to skip interactive prompt\n- Update .gitignore to allow processed data via LFS\n\nTotal size: ~938 MB stored efficiently via Git LFS\nProcessing time: 49 seconds (~0.02s per song)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")"
     ]
   }
 }
